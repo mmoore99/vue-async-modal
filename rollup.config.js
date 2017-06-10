@@ -19,7 +19,9 @@ const plugins = [
       preserveWhitespace: !isProd
     }
   }),
-  buble()
+  buble({
+    objectAssign: 'Object.assign'
+  })
 ]
 
 isProd && plugins.push(uglify({

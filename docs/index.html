@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Vue Async Modal</title>
+  <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <style>
     [v-cloak] {
       display: none;
@@ -11,11 +12,12 @@
 </head>
 <body>
 <div id="app" v-cloak>
-  <button @click="openModal">Open Modal</button>
+  <button @click="openModal">Open Modal</button> {{ msg }}
   <modal/>
 </div>
 <script src="//unpkg.com/vue"></script>
-<script src="../dist/modal.js"></script>
+<script src="//unpkg.com/vue-async-modal"></script>
+<!--<script src="../dist/modal.js"></script>-->
 <script src="./demo.js"></script>
 </body>
 </html>
