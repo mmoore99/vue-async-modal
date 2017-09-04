@@ -47,13 +47,12 @@ export default {
     }),
     new webpack.optimize.CommonsChunkPlugin('vendors'),
     new webpack.optimize.CommonsChunkPlugin('manifest'),
-    ...
-      isProd ? [
-        new ExtractTextPlugin('[name].[chunkhash].css'),
-        new webpack.optimize.ModuleConcatenationPlugin()
-      ] : [
-        new webpack.NamedModulesPlugin(),
-        new webpack.NamedChunksPlugin()
-      ]
+    ...isProd ? [
+      new ExtractTextPlugin('[name].[chunkhash].css'),
+      new webpack.optimize.ModuleConcatenationPlugin()
+    ] : [
+      new webpack.NamedModulesPlugin(),
+      new webpack.NamedChunksPlugin()
+    ]
   ]
 }
